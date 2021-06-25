@@ -18,7 +18,7 @@
 
      Note: by default, only bugfix and feature commit logs will be put in CHANGELOGS.md automatically
 
-2. When ready, merge your code to the master branch
+2. When ready, merge your code to the main branch
 
 3. Test to make sure all test pass
 
@@ -38,7 +38,7 @@
 2. Push changes to GitHub:
 
    ```bash
-   git push --follow-tags origin master
+   git push --follow-tags origin main
    ```
 
 3. GitHub Actions will take care the rest of release steps

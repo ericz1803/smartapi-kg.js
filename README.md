@@ -2,7 +2,7 @@
 
 <p>
   
-  <a href='https://coveralls.io/github/biothings/smartapi-kg.js?branch=master'><img src='https://coveralls.io/repos/github/biothings/smartapi-kg.js/badge.svg?branch=master' alt='Coverage Status' /></a>
+  <a href='https://coveralls.io/github/biothings/smartapi-kg.js'><img src='https://coveralls.io/repos/github/biothings/smartapi-kg.js/badge.svg' alt='Coverage Status' /></a>
   <a href="https://www.npmjs.com/package/@biothings-explorer/smartapi-kg" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/@biothings-explorer/smartapi-kg.svg">
   </a>
@@ -132,7 +132,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2020 [Jiwen Xin](https://github.com/kevinxin90).<br />
-This project is [ISC](https://github.com/biothings/smartapi-kg.js/blob/master/LICENSE) licensed.
+This project is [ISC](https://github.com/biothings/smartapi-kg.js/blob/main/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
