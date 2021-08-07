@@ -85,7 +85,7 @@
                             "outputs": [
                                 {
                                     "id": "biolink:CHEMBL.COMPOUND",
-                                    "semantic": "biolink:ChemicalSubstance"
+                                    "semantic": "biolink:SmallMolecule"
                                 }
                             ],
                             "parameters": {

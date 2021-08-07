@@ -17,7 +17,7 @@ describe("Test filter function", () => {
             association: {
                 input_type: "SequenceVariant",
                 input_id: "NCBIGENE",
-                output_type: "ChemicalSubstance",
+                output_type: "SmallMolecule",
                 output_id: "CHEBI",
                 predicate: "PRED2",
                 source: "SOURCE2",
@@ -28,7 +28,7 @@ describe("Test filter function", () => {
             association: {
                 input_type: "Gene",
                 input_id: "NCBIGENE",
-                output_type: "ChemicalSubstance",
+                output_type: "SmallMolecule",
                 output_id: "CHEBI",
                 predicate: "PRED3",
                 source: "SOURCE3"
@@ -58,9 +58,9 @@ describe("Test filter function", () => {
         expect(res[0].association.source).toEqual("SOURCE1");
     })
 
-    test("Return only ops with output type gene when specifying output type as chemicalsubstance in string", () => {
-        const res = ft(ops, { output_type: "ChemicalSubstance" });
-        expect(res).toHaveLength(ops.filter(op => op.association.output_type === "ChemicalSubstance").length);
+    test("Return only ops with output type gene when specifying output type as SmallMolecule in string", () => {
+        const res = ft(ops, { output_type: "SmallMolecule" });
+        expect(res).toHaveLength(ops.filter(op => op.association.output_type === "SmallMolecule").length);
         expect(res[0].association.source).toEqual("SOURCE2");
     })
 
@@ -76,14 +76,14 @@ describe("Test filter function", () => {
         expect(res[0].association.source).toEqual("SOURCE1");
     })
 
-    test("Return only ops with input type Gene and output type Disease/ChemicalSubstance when specifying input as Gene and output as Disease/ChemicalSubstance", () => {
-        const res = ft(ops, { input_type: 'Gene', output_type: ["Disease", "ChemicalSubstance"] });
-        expect(res).toHaveLength(ops.filter(op => op.association.input_type === 'Gene' && ["Disease", "ChemicalSubstance"].includes(op.association.output_type)).length);
+    test("Return only ops with input type Gene and output type Disease/SmallMolecule when specifying input as Gene and output as Disease/SmallMolecule", () => {
+        const res = ft(ops, { input_type: 'Gene', output_type: ["Disease", "SmallMolecule"] });
+        expect(res).toHaveLength(ops.filter(op => op.association.input_type === 'Gene' && ["Disease", "SmallMolecule"].includes(op.association.output_type)).length);
         expect(res[0].association.source).toEqual("SOURCE1");
     })
 
     test("Return empty array when couldn't find a match", () => {
-        const res = ft(ops, { input_type: 'Gene1', output_type: ["Disease", "ChemicalSubstance"] });
+        const res = ft(ops, { input_type: 'Gene1', output_type: ["Disease", "SmallMolecule"] });
         expect(res).toHaveLength(0);
     })
 })
