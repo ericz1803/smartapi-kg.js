@@ -6,10 +6,10 @@
   <a href="https://www.npmjs.com/package/@biothings-explorer/smartapi-kg" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/@biothings-explorer/smartapi-kg.svg">
   </a>
-  <a href="https://github.com/kevinxin90/smartapi-kg.js#readme" target="_blank">
+  <a href="https://github.com/biothings/smartapi-kg.js#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/kevinxin90/smartapi-kg.js/graphs/commit-activity" target="_blank">
+  <a href="https://github.com/biothings/smartapi-kg.js/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
 </p>
@@ -17,7 +17,7 @@
 [![Test](https://github.com/biothings/smartapi-kg.js/actions/workflows/test.yml/badge.svg)](https://github.com/biothings/smartapi-kg.js/actions/workflows/test.yml)
 > Generate a meta knowledge graph of how biomedical concepts are connected based on SmartAPI Specifications with built-in filtering capabilities
 
-### 🏠 [Homepage](https://github.com/kevinxin90/smartapi-kg.js#readme)
+### 🏠 [Homepage](https://github.com/biothings/smartapi-kg.js#readme)
 
 ## Install
 
@@ -100,9 +100,9 @@ npm i @biothings-explorer/smartapi-kg
     //filter based on predicate and input_id
     meta_kg.filter({predicate: 'treats', input_id: 'CHEMBL.COMPOUND'})
     //filter based on predicate and input_type
-    meta_kg.filter({predicate: ['treats', 'physically_interacts_with'], input_type: 'ChemicalSubstance'})
+    meta_kg.filter({predicate: ['treats', 'physically_interacts_with'], input_type: 'SmallMolecule'})
     //filter based on input_type, output_type and api
-    meta_kg.filter({ api: "Automat PHAROS API", input_type: "ChemicalSubstance", output_type: "Gene" });
+    meta_kg.filter({ api: "Automat PHAROS API", input_type: "SmallMolecule", output_type: "Gene" });
 
     ```
 
