@@ -63,6 +63,30 @@ export default class SyncOperationsBuilderWithReasoner extends BaseOperationsBui
               },
             });
           });
+        } else {
+          ops.push({
+            association: {
+              input_type: this.removeBioLinkPrefix(sbj),
+              output_type: this.removeBioLinkPrefix(obj),
+              // @ts-ignore
+              predicate: this.removeBioLinkPrefix(metadata.predicates[sbj][obj]),
+              api_name: metadata.association.api_name,
+              smartapi: metadata.association.smartapi,
+              "x-translator": metadata.association["x-translator"],
+            },
+            tags: [...metadata.tags, ...["bte-trapi"]],
+            query_operation: {
+              path: metadata.query_operation.path,
+              method: "post",
+              server: metadata.query_operation.server,
+              path_params: undefined,
+              params: undefined,
+              request_body: undefined,
+              supportBatch: true,
+              inputSeparator: ",",
+              tags: [...metadata.tags, ...["bte-trapi"]],
+            },
+          });
         }
       });
     });
